@@ -39,7 +39,6 @@ const generateFlow = async (data: any, metadata: sdk.FlowGeneratorMetadata): Pro
   const repeatQuestion = yn(data.config.repeatChoicesOnInvalid)
 
   const sorrySteps = []
-
   if (data.invalidContentId && data.invalidContentId.length >= 3) {
     sorrySteps.push({
       type: sdk.NodeActionType.RenderElement,

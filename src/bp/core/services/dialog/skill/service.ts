@@ -5,7 +5,7 @@ import nanoid from 'nanoid/generate'
 
 @injectable()
 export class SkillService {
-  constructor() {}
+  constructor() { }
 
   public finalizeFlow(partialFlow: FlowGenerationResult) {
     if (_.get(partialFlow, 'flow.nodes.length') == 0) {
@@ -42,7 +42,7 @@ export class SkillService {
       const args = action.args || {}
       finalNode = _.isString(args) ? `say ${action.name} ${args}` : `say ${action.name} ${JSON.stringify(args)}`
     }
-
+    console.log(finalNode);
     return finalNode
   }
 
