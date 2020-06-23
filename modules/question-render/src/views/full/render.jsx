@@ -1,9 +1,10 @@
 import React from 'react'
 import { Form, Input, Label, FormGroup } from 'reactstrap'
-
+import nanoid from 'nanoid/generate'
 export class Render extends React.Component {
   state = {
     lessonInput: undefined,
+    randomId: nanoid('abcdefghijklmnopqrstuvwxyz0123456789', 10),
   }
   componentDidMount() {
     this.setStateFromProps()
